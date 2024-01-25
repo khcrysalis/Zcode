@@ -73,7 +73,6 @@ class XcodeView: DVTSourceTextScrollView {
                         codeStorage.language = language
                     }
                 } catch {
-                    // Handle the error when determining codeType
                     print("Error determining codeType: \(error)")
                 }
             }
@@ -107,7 +106,6 @@ class XcodeView: DVTSourceTextScrollView {
                 rulersVisible = true
             }
         } catch {
-            // Handle the error when reading the file
             print("Error loading file: \(error)")
         }
     }

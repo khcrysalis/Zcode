@@ -7,6 +7,7 @@
 
 import DVTBridge
 
+
 class AppDelegate: NSObject, NSApplicationDelegate {
     var contentView: WindowController!
     var document: Document!

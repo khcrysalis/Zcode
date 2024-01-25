@@ -1,4 +1,4 @@
-// Credit asentient bot
+#warning("This code was taken from https://github.com/asentientbot/ycode.")
 
 #import <Cocoa/Cocoa.h>
 
