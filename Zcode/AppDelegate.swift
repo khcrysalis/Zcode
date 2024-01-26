@@ -14,16 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var info = Bundle.main.infoDictionary!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        DVTDeveloperPaths.initializeApplicationDirectoryName("Zcode")
 
         setupMenuBar()
 
-        document = Document()
-
-        contentView = WindowController()
-        contentView.document = document
-
-        contentView.showWindow(nil)
         NSApp.activate(ignoringOtherApps: true)
 
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
@@ -48,10 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
-    
-    func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-        return true
-    }
 }
 
 
@@ -60,24 +49,9 @@ extension AppDelegate {
     @objc func quit() { NSApplication.shared.terminate(self)}
     @objc func orderFrontStandardAboutPanel() { NSApplication.shared.orderFrontStandardAboutPanel(nil) }
 
-    @objc func undo() { contentView.xcodeView.codeView.undoManager?.undo() }
-    @objc func redo() { contentView.xcodeView.codeView.undoManager?.redo() }
-    
-    @objc func saveDocument(_ sender: Any?) {
-        if let document = contentView.document {
-            document.saveDocument(sender)        }
-    }
-    
-    @objc func validateUserInterfaceItem(_ item: NSValidatedUserInterfaceItem) -> Bool {
-        if item.action == #selector(undo) {
-            return contentView.xcodeView.codeView.undoManager?.canUndo ?? false
-        } else if item.action == #selector(redo) {
-            return contentView.xcodeView.codeView.undoManager?.canRedo ?? false
-        }
-        return true
-    }
-
-
+    @objc func undo() { contentView.xcodeView.undo() }
+    @objc func redo() { contentView.xcodeView.redo() }
+    @objc func save() { NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: nil) }
 }
 
 extension AppDelegate {
@@ -100,9 +74,7 @@ extension AppDelegate {
         fileMenu.addItem(withTitle: "Open", action: #selector(contentView.document?.openDocument(_:)), keyEquivalent: "o")
         fileMenu.addItem(NSMenuItem.separator())
         fileMenu.addItem(withTitle: "Close", action: #selector(contentView.document?.close(_:)), keyEquivalent: "w")
-        fileMenu.addItem(withTitle: "Save", action: #selector(contentView.document?.saveDocument(_:)), keyEquivalent: "s")
-
-
+        fileMenu.addItem(withTitle: "Save", action: #selector(AppDelegate.save), keyEquivalent: "s")
 
         let fileMenuItem = NSMenuItem()
         fileMenuItem.title = "File"
@@ -124,9 +96,6 @@ extension AppDelegate {
         editMenuItem.title = "Edit"
         editMenuItem.submenu = editMenu
         menu.addItem(editMenuItem)
-        
-        
-        
         
         // View
         let viewMenu = NSMenu()

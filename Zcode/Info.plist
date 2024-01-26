@@ -5,17 +5,23 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array/>
 			<key>CFBundleTypeName</key>
-			<string>document</string>
+			<string>Unicode (UTF-8)</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>Item 0</key>
+			<string>txt</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.text</string>
 				<string>public.data</string>
 			</array>
 			<key>NSDocumentClass</key>
-			<string>Document</string>
+			<string>$(PRODUCT_MODULE_NAME).Document</string>
 		</dict>
 	</array>
 </dict>
