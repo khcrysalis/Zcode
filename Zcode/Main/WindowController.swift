@@ -12,9 +12,10 @@ class WindowController: NSWindowController {
     var xcodeView: XcodeView!
 
     override init(window: NSWindow?) {
-        super.init(window: window)
+        super.init(window: nil)
 
         windowFrameAutosaveName = "window"
+        shouldCascadeWindows = false
 
         let minWidth: CGFloat = 500
         let windowRect = NSRect(x: 0, y: 0, width: minWidth, height: minWidth)
@@ -25,13 +26,15 @@ class WindowController: NSWindowController {
         self.window = window
 
         xcodeView = XcodeView(frame: window.frame)
+        self.contentViewController = NSViewController()
+        self.contentViewController?.view = xcodeView
         window.contentView = xcodeView
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     deinit {
         self.contentViewController = nil
     }

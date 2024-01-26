@@ -22,7 +22,6 @@ func LANGUAGE_FALLBACKS() -> [String: String] {
 
     // ActionScript
     result["as"] = "Xcode.SourceCodeLanguage.JavaScript"
-    //result["Swift"] = "Xcode.SourceCodeLanguage.Java"
 
 
     return result
