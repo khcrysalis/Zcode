@@ -17,6 +17,7 @@
 		33D5E1EB2B60B96F00B9BD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D5E1EA2B60B96F00B9BD84 /* Assets.xcassets */; };
 		33D5E2182B60D68000B9BD84 /* DVTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D5E2172B60D68000B9BD84 /* DVTFoundation.framework */; };
 		33D5E21C2B60D68B00B9BD84 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D5E21B2B60D68A00B9BD84 /* DVTKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		33DBAF1D2B6390CE00A4ADCE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DBAF1C2B6390CE00A4ADCE /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,7 @@
 		33A9E1CB2B60E101005F85CD /* packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = packages; sourceTree = "<group>"; };
 		33A9E1CC2B60E4CA005F85CD /* XcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeView.swift; sourceTree = "<group>"; };
 		33A9E1CE2B60E520005F85CD /* XcodeViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeViewSettings.swift; sourceTree = "<group>"; };
-		33A9E1D02B60E69B005F85CD /* XcodeWrapAnywhereTypesetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeWrapAnywhereTypesetter.swift; sourceTree = "<group>"; };
+		33A9E1D02B60E69B005F85CD /* XcodeWrapAnywhereTypesetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeWrapAnywhereTypesetter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		33A9E1D22B611710005F85CD /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		33A9E1D52B611B33005F85CD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		33D5E1E32B60B96E00B9BD84 /* Zcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +41,7 @@
 		33D5E2172B60D68000B9BD84 /* DVTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTFoundation.framework; path = "../../../../Applications/xcode/Xcode-14.3.1.app/Contents/SharedFrameworks/DVTFoundation.framework"; sourceTree = "<group>"; };
 		33D5E21B2B60D68A00B9BD84 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = "../../../../Applications/xcode/Xcode-14.3.1.app/Contents/SharedFrameworks/DVTKit.framework"; sourceTree = "<group>"; };
 		33D5E2242B60D93200B9BD84 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		33DBAF1C2B6390CE00A4ADCE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				3348C0ED2B614FE300764DD9 /* Info.plist */,
 				33A9E1C62B60DEB3005F85CD /* main.swift */,
+				33DBAF1C2B6390CE00A4ADCE /* SwiftUIView.swift */,
 				33D5E1E62B60B96E00B9BD84 /* AppDelegate.swift */,
 				33A9E1D82B611D4F005F85CD /* Main */,
 				33A9E1D72B611D45005F85CD /* XcodeView */,
@@ -200,6 +203,7 @@
 			files = (
 				33A9E1CF2B60E520005F85CD /* XcodeViewSettings.swift in Sources */,
 				33A9E1C72B60DEB3005F85CD /* main.swift in Sources */,
+				33DBAF1D2B6390CE00A4ADCE /* SwiftUIView.swift in Sources */,
 				33A9E1D12B60E69B005F85CD /* XcodeWrapAnywhereTypesetter.swift in Sources */,
 				33D5E1E72B60B96E00B9BD84 /* AppDelegate.swift in Sources */,
 				33A9E1D62B611B33005F85CD /* WindowController.swift in Sources */,
@@ -346,7 +350,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zcode/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Zcode;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 ssalggnikool (Samara). All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -381,7 +385,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zcode/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Zcode;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 ssalggnikool (Samara). All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
