@@ -13,9 +13,9 @@ class WindowController: NSWindowController {
 
     override init(window: NSWindow?) {
         super.init(window: window)
-        
+
         windowFrameAutosaveName = "window"
-        
+
         let minWidth: CGFloat = 500
         let windowRect = NSRect(x: 0, y: 0, width: minWidth, height: minWidth)
         let windowStyle: NSWindow.StyleMask = [.titled, .closable, .miniaturizable, .resizable]
@@ -23,10 +23,8 @@ class WindowController: NSWindowController {
         window.minSize = NSSize(width: minWidth, height: minWidth)
         window.tabbingMode = .preferred
         self.window = window
-        
+
         xcodeView = XcodeView(frame: window.frame)
-        self.contentViewController = NSViewController()
-        self.contentViewController?.view = xcodeView
         window.contentView = xcodeView
     }
     
