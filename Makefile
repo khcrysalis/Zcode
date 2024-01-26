@@ -20,7 +20,8 @@ package: dvt-include
 	# Build
 	@set -o pipefail; \
 		xcodebuild -jobs $(shell sysctl -n hw.ncpu) -project 'Zcode.xcodeproj' -scheme Zcode -configuration Release -sdk macosx -derivedDataPath $(ZCODETMP) \
-		DSTROOT=$(ZCODETMP)/install ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO
+		DSTROOT=$(ZCODETMP)/install ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO \
+		SYSTEM_FRAMEWORK_SEARCH_PATHS=$(shared_frameworks_path) RUNPATH_SEARCH_PATHS=$(shared_frameworks_path)
 	
 	@rm -rf $(ZCODE_STAGE_DIR)/
 	@mkdir -p $(ZCODE_STAGE_DIR)/Payload

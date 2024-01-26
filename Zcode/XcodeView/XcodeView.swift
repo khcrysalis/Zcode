@@ -93,12 +93,14 @@ class XcodeView: DVTSourceTextScrollView {
         if SHOW_LINE_NUMBERS {
             let sidebarView = DVTTextSidebarView(scrollView: self, orientation: .verticalRuler)
             sidebarView.drawsLineNumbers = true
-            //sidebarView.alphaValue = 0.3
-            //scrollerStyle = .overlay
+            
             verticalRulerView = sidebarView
             hasVerticalRuler = true
             rulersVisible = true
+            
         }
+
+
     }
     
     @objc func undo() {
