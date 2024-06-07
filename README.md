@@ -1,3 +1,9 @@
+# Zcode
+
+A texteditor using Xcode's private DVT frameworks.
+
+## Preview
+
 <p align="center">
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="Images/dark.png">
@@ -6,15 +12,11 @@
     </picture>
 </p>
 
-# Zcode
-
-A texteditor using Xcode's private DVT frameworks.
-
 ## Why make Zcode?
 
 I wanted to write [Ycode](https://github.com/asentientbot/ycode) in swift rather than have it in Objective-C, so I went ahead and did that for learning purposes.
 
 ## Build
 
-1. Run `make package`
-  - This will output to `packages`, drag it into `/Applications`
+- Run `make package`
+- This will output to `packages`, drag it into `/Applications`
